@@ -2,7 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { Phone, Clock, MapPin, Star, ChevronDown, CheckCircle2, ArrowLeft, ArrowRight } from "lucide-react";
+import Link from "next/link"; // <-- Added Next.js Link
+import { Phone, Clock, MapPin, Star, ChevronDown, CheckCircle2, ArrowLeft, ArrowRight, Mail } from "lucide-react"; // <-- Added Mail icon
 
 const PHONE_NUMBER = "(951)-981-9160";
 
@@ -97,7 +98,6 @@ export default function Home() {
     }
   };
 
-  // Prevent rendering until the component is mounted on the client to avoid hydration mismatch
   if (!mounted) {
     return <div className="min-h-screen bg-white"></div>;
   }
@@ -151,13 +151,14 @@ export default function Home() {
             </div>
           </div>
           
-          <button 
-            onClick={handleCall}
+          {/* UPDATED: Now a Link instead of a button */}
+          <Link 
+            href="/contact"
             className="bg-blue-400 text-black hover:bg-blue-300 transition-colors rounded-md font-bold px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-xl w-full sm:w-auto inline-flex items-center justify-center"
           >
-            <Phone className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6 fill-current" />
+            <Mail className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
             Talk to a Garage Door Expert Now
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -230,8 +231,6 @@ export default function Home() {
                   <div className="absolute inset-0 flex items-center justify-center text-gray-400">
                     <span className="text-sm font-medium">Image {i + 1} Placeholder</span>
                   </div>
-                  {/* Uncomment when you have actual images: */}
-                  {/* <Image src={img.src} alt={img.alt} fill className="object-cover" /> */}
                   <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs sm:text-sm px-3 py-1 rounded shadow-lg font-semibold tracking-wide select-none pointer-events-none z-10">
                     Before / After
                   </div>
@@ -303,7 +302,6 @@ export default function Home() {
           </div>
           
           <div className="relative group">
-            {/* Carousel Container */}
             <div 
               ref={carouselRef}
               className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 hide-scrollbar scroll-smooth"
@@ -356,12 +354,12 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="bg-black text-white py-8 sm:py-12 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 sm:mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-8 mb-8 sm:mb-10">
             {/* Brand / Contact */}
             <div className="space-y-6">
               <div className="flex flex-col">
                 <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-                  <span className="text-blue-400">Alex</span>
+                  <span className="text-blue-400">ALEX</span>
                   <span className="text-white ml-1">HANDYMAN</span>
                 </h2>
                 <p className="text-sm text-gray-400 mt-1">Professional Garage Door Repair</p>
@@ -405,32 +403,7 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Service Areas */}
-            <div className="space-y-6">
-              <h4 className="text-xl font-bold text-blue-400">Service Areas</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <h5 className="text-sm font-semibold text-gray-400 mb-2">Northeast</h5>
-                  <ul className="space-y-2">
-                    {serviceAreas.Northeast.map((area, i) => (
-                      <li key={i}>
-                        <span className="text-sm text-gray-400">{area.split('/')[0].trim()}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="text-sm font-semibold text-gray-400 mb-2">South</h5>
-                  <ul className="space-y-2">
-                    {serviceAreas.South.map((area, i) => (
-                      <li key={i}>
-                        <span className="text-sm text-gray-400">{area.split('/')[0].trim()}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+            
           </div>
 
           <hr className="border-gray-800 my-6" />
@@ -440,9 +413,9 @@ export default function Home() {
               © {new Date().getFullYear()} Alex Handyman. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <button onClick={handleCall} className="text-sm text-gray-500 hover:text-blue-400 transition-colors">
+              <Link href="/contact" className="text-sm text-gray-500 hover:text-blue-400 transition-colors">
                 Contact Us
-              </button>
+              </Link>
               <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-sm text-gray-500 hover:text-blue-400 transition-colors">
                 Back to Top
               </button>

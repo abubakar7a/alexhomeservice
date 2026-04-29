@@ -110,7 +110,7 @@ export default function Home() {
           <div className="flex items-center space-x-3 mb-3 sm:mb-0">
             <div className="flex flex-col">
               <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-                <span className="text-yellow-400">ALEX</span>
+                <span className="text-blue-400">ALEX</span>
                 <span className="text-white ml-1">HANDYMAN</span>
               </h1>
               <p className="text-xs sm:text-sm text-gray-300">Professional Garage Door Repair</p>
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
           <button 
             onClick={handleCall}
-            className="bg-yellow-400 text-black hover:bg-yellow-300 transition-colors font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-md text-lg sm:text-xl w-full sm:w-auto flex items-center justify-center"
+            className="bg-blue-400 text-black hover:bg-blue-300 transition-colors font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-md text-lg sm:text-xl w-full sm:w-auto flex items-center justify-center"
           >
             <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5 fill-current" />
             {PHONE_NUMBER}
@@ -130,22 +130,22 @@ export default function Home() {
       <section className="bg-gradient-to-r from-black to-gray-900 text-white py-10 sm:py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 px-2">
-            Need a <span className="text-yellow-400">Garage Door Guy</span> Near You?
+            Need a <span className="text-blue-400">Garage Door Guy</span> Near You?
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-gray-300 px-2">
             We Fix What's Broken. Fast Response. Real Solutions.
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-8 sm:mb-12">
-            <div className="flex items-center space-x-2 text-yellow-400">
+            <div className="flex items-center space-x-2 text-blue-400">
               <Clock className="h-5 w-5 sm:h-6 sm:w-6" />
               <span className="text-base sm:text-lg font-semibold">24/7 Emergency Service</span>
             </div>
-            <div className="flex items-center space-x-2 text-yellow-400">
+            <div className="flex items-center space-x-2 text-blue-400">
               <MapPin className="h-5 w-5 sm:h-6 sm:w-6" />
               <span className="text-base sm:text-lg font-semibold">30+ Metro Areas</span>
             </div>
-            <div className="flex items-center space-x-2 text-yellow-400">
+            <div className="flex items-center space-x-2 text-blue-400">
               <Star className="h-5 w-5 sm:h-6 sm:w-6 fill-current" />
               <span className="text-base sm:text-lg font-semibold">4.8/5 Rating</span>
             </div>
@@ -153,7 +153,7 @@ export default function Home() {
           
           <button 
             onClick={handleCall}
-            className="bg-yellow-400 text-black hover:bg-yellow-300 transition-colors rounded-md font-bold px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-xl w-full sm:w-auto inline-flex items-center justify-center"
+            className="bg-blue-400 text-black hover:bg-blue-300 transition-colors rounded-md font-bold px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-xl w-full sm:w-auto inline-flex items-center justify-center"
           >
             <Phone className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6 fill-current" />
             Talk to a Garage Door Expert Now
@@ -177,7 +177,7 @@ export default function Home() {
             {problems.map((item, index) => {
               const isOpen = openProblemIndex === index;
               return (
-                <div key={index} className="border-2 rounded-lg border-gray-900 hover:border-yellow-400 transition-all duration-300 shadow-sm overflow-hidden bg-white">
+                <div key={index} className="border-2 rounded-lg border-gray-900 hover:border-blue-400 transition-all duration-300 shadow-sm overflow-hidden bg-white">
                   <button 
                     onClick={() => toggleProblem(index)}
                     className="w-full p-3 sm:p-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
@@ -195,7 +195,7 @@ export default function Home() {
                   </button>
                   
                   <div className={`transition-all duration-300 ease-in-out ${isOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}>
-                    <div className="px-3 sm:px-4 pb-3 sm:pb-4 border-t bg-yellow-50">
+                    <div className="px-3 sm:px-4 pb-3 sm:pb-4 border-t bg-blue-50">
                       <div className="pt-3">
                         <h4 className="font-bold text-black mb-2 text-sm sm:text-base">How We Fix It:</h4>
                         <p className="text-sm text-gray-700">{item.solution}</p>
@@ -231,7 +231,7 @@ export default function Home() {
                     <span className="text-sm font-medium">Image {i + 1} Placeholder</span>
                   </div>
                   {/* Uncomment when you have actual images: */}
-                  <Image src={img.src} alt={img.alt} fill className="object-cover" />
+                  {/* <Image src={img.src} alt={img.alt} fill className="object-cover" /> */}
                   <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs sm:text-sm px-3 py-1 rounded shadow-lg font-semibold tracking-wide select-none pointer-events-none z-10">
                     Before / After
                   </div>
@@ -251,24 +251,24 @@ export default function Home() {
           </h2>
           
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            <div className="text-center bg-white p-6 sm:p-8 rounded-lg shadow-md border border-gray-100 hover:border-yellow-400 transition-all hover:shadow-lg">
-              <div className="bg-yellow-400 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+            <div className="text-center bg-white p-6 sm:p-8 rounded-lg shadow-md border border-gray-100 hover:border-blue-400 transition-all hover:shadow-lg">
+              <div className="bg-blue-400 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <Clock className="h-7 w-7 sm:h-8 sm:w-8 text-black" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">Same-Day Service</h3>
               <p className="text-sm sm:text-base text-gray-600">Most repairs completed in one visit. We stock common parts on every truck.</p>
             </div>
             
-            <div className="text-center bg-white p-6 sm:p-8 rounded-lg shadow-md border border-gray-100 hover:border-yellow-400 transition-all hover:shadow-lg">
-              <div className="bg-yellow-400 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+            <div className="text-center bg-white p-6 sm:p-8 rounded-lg shadow-md border border-gray-100 hover:border-blue-400 transition-all hover:shadow-lg">
+              <div className="bg-blue-400 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <CheckCircle2 className="h-7 w-7 sm:h-8 sm:w-8 text-black" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">Licensed & Insured</h3>
               <p className="text-sm sm:text-base text-gray-600">Fully certified technicians with comprehensive insurance coverage for your peace of mind.</p>
             </div>
             
-            <div className="text-center bg-white p-6 sm:p-8 rounded-lg shadow-md border border-gray-100 hover:border-yellow-400 transition-all hover:shadow-lg sm:col-span-2 md:col-span-1">
-              <div className="bg-yellow-400 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+            <div className="text-center bg-white p-6 sm:p-8 rounded-lg shadow-md border border-gray-100 hover:border-blue-400 transition-all hover:shadow-lg sm:col-span-2 md:col-span-1">
+              <div className="bg-blue-400 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <Star className="h-7 w-7 sm:h-8 sm:w-8 text-black fill-current" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">Honest Pricing</h3>
@@ -285,7 +285,7 @@ export default function Home() {
           <p className="text-base sm:text-xl mb-6 sm:mb-8 text-gray-300">Call us directly for professional and reliable garage door service every time.</p>
           <button 
             onClick={handleCall}
-            className="bg-yellow-400 text-black hover:bg-yellow-300 transition-colors rounded-md font-bold px-8 py-4 sm:px-12 sm:py-6 text-xl sm:text-2xl animate-pulse w-full sm:w-auto inline-flex items-center justify-center"
+            className="bg-blue-400 text-black hover:bg-blue-300 transition-colors rounded-md font-bold px-8 py-4 sm:px-12 sm:py-6 text-xl sm:text-2xl animate-pulse w-full sm:w-auto inline-flex items-center justify-center"
           >
             <Phone className="mr-2 sm:mr-3 h-6 w-6 sm:h-8 sm:w-8 fill-current" />
             Call {PHONE_NUMBER} Now
@@ -310,13 +310,13 @@ export default function Home() {
             >
               {testimonials.map((review, i) => (
                 <div key={i} className="snap-start shrink-0 w-full sm:w-1/2 lg:w-1/3 flex">
-                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md border-2 border-gray-200 hover:border-yellow-400 transition-all duration-300 p-6 flex flex-col h-full w-full">
-                    <div className="flex items-center mb-4 text-yellow-400">
+                  <div className="bg-white rounded-lg shadow-sm hover:shadow-md border-2 border-gray-200 hover:border-blue-400 transition-all duration-300 p-6 flex flex-col h-full w-full">
+                    <div className="flex items-center mb-4 text-blue-400">
                       {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
                     </div>
                     <p className="text-gray-700 mb-4 italic grow">"{review.text}"</p>
                     <div className="flex items-center mt-auto">
-                      <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold shrink-0">
+                      <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-black font-bold shrink-0">
                         {review.initials}
                       </div>
                       <div className="ml-3">
@@ -332,14 +332,14 @@ export default function Home() {
             {/* Navigation Buttons */}
             <button 
               onClick={() => scrollCarousel('left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/90 hover:bg-yellow-400 text-black shadow-md rounded-full border border-gray-200 transition-colors z-10 h-10 w-10 flex items-center justify-center opacity-0 md:group-hover:opacity-100"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/90 hover:bg-blue-400 text-black shadow-md rounded-full border border-gray-200 transition-colors z-10 h-10 w-10 flex items-center justify-center opacity-0 md:group-hover:opacity-100"
               aria-label="Previous testimonial"
             >
               <ArrowLeft className="h-5 w-5" />
             </button>
             <button 
               onClick={() => scrollCarousel('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/90 hover:bg-yellow-400 text-black shadow-md rounded-full border border-gray-200 transition-colors z-10 h-10 w-10 flex items-center justify-center opacity-0 md:group-hover:opacity-100"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/90 hover:bg-blue-400 text-black shadow-md rounded-full border border-gray-200 transition-colors z-10 h-10 w-10 flex items-center justify-center opacity-0 md:group-hover:opacity-100"
               aria-label="Next testimonial"
             >
               <ArrowRight className="h-5 w-5" />
@@ -361,24 +361,24 @@ export default function Home() {
             <div className="space-y-6">
               <div className="flex flex-col">
                 <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-                  <span className="text-yellow-400">Alex</span>
+                  <span className="text-blue-400">Alex</span>
                   <span className="text-white ml-1">HANDYMAN</span>
                 </h2>
                 <p className="text-sm text-gray-400 mt-1">Professional Garage Door Repair</p>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center space-x-2 text-gray-300">
-                  <Phone className="h-5 w-5 text-yellow-400 fill-current" />
-                  <button onClick={handleCall} className="text-lg hover:text-yellow-400 transition-colors">
+                  <Phone className="h-5 w-5 text-blue-400 fill-current" />
+                  <button onClick={handleCall} className="text-lg hover:text-blue-400 transition-colors">
                     {PHONE_NUMBER}
                   </button>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-300">
-                  <Clock className="h-5 w-5 text-yellow-400" />
+                  <Clock className="h-5 w-5 text-blue-400" />
                   <span className="text-lg">24/7 Emergency Service</span>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-300">
-                  <MapPin className="h-5 w-5 text-yellow-400" />
+                  <MapPin className="h-5 w-5 text-blue-400" />
                   <span className="text-lg">Serving Major US Locations</span>
                 </div>
               </div>
@@ -386,7 +386,7 @@ export default function Home() {
 
             {/* Services */}
             <div className="space-y-6">
-              <h4 className="text-xl font-bold text-yellow-400">Our Services</h4>
+              <h4 className="text-xl font-bold text-blue-400">Our Services</h4>
               <ul className="space-y-3">
                 {[
                   "Broken Spring Repair",
@@ -396,7 +396,7 @@ export default function Home() {
                   "New Garage Door Installation"
                 ].map((service, i) => (
                   <li key={i}>
-                    <button className="text-gray-300 hover:text-yellow-400 transition-colors flex items-center group">
+                    <button className="text-gray-300 hover:text-blue-400 transition-colors flex items-center group">
                       <ArrowRight className="h-4 w-4 mr-2 transform group-hover:translate-x-1 transition-transform" />
                       {service}
                     </button>
@@ -407,7 +407,7 @@ export default function Home() {
 
             {/* Service Areas */}
             <div className="space-y-6">
-              <h4 className="text-xl font-bold text-yellow-400">Service Areas</h4>
+              <h4 className="text-xl font-bold text-blue-400">Service Areas</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <h5 className="text-sm font-semibold text-gray-400 mb-2">Northeast</h5>
@@ -440,10 +440,10 @@ export default function Home() {
               © {new Date().getFullYear()} Alex Handyman. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <button onClick={handleCall} className="text-sm text-gray-500 hover:text-yellow-400 transition-colors">
+              <button onClick={handleCall} className="text-sm text-gray-500 hover:text-blue-400 transition-colors">
                 Contact Us
               </button>
-              <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-sm text-gray-500 hover:text-yellow-400 transition-colors">
+              <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-sm text-gray-500 hover:text-blue-400 transition-colors">
                 Back to Top
               </button>
             </div>
@@ -455,7 +455,7 @@ export default function Home() {
       <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50">
         <button 
           onClick={handleCall}
-          className="bg-yellow-400 text-black hover:bg-yellow-300 transition-colors font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-full shadow-lg animate-pulse flex items-center"
+          className="bg-blue-400 text-black hover:bg-blue-300 transition-colors font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-full shadow-lg animate-pulse flex items-center"
         >
           <Phone className="mr-1 h-5 w-5 sm:h-6 sm:w-6 fill-current" />
           Call Now

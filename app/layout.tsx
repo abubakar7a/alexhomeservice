@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   icons: {
-    icon: "/favicon.ico", // Ensure you have a favicon.ico in your /public folder
+    icon: "/favicon.ico",
   },
 };
 
@@ -64,14 +65,16 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <script
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.className} bg-white text-gray-900`} suppressHydrationWarning>
+        
+        {/* Next.js optimized script tag for structured data */}
+        <Script
+          id="schema-script"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className={`${inter.className} bg-white text-gray-900`}>
+        
         {children}
       </body>
     </html>
